@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: zensical-build
+        name: Build documentation with Zensical
+        entry: uv run zensical build --strict
+        language: system
+        files: ^(docs/|zensical\.toml$|pyproject\.toml$|uv\.lock$)
+        pass_filenames: false

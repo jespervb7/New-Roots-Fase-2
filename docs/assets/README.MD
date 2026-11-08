@@ -1,0 +1,1 @@
+This folder is used for assets that aren't related to pages. If you want to include media in pages you should put these in ../images
