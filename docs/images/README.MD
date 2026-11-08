@@ -1,0 +1,1 @@
+This folder is used to hold images and documents that are linked through pages. For other `asset` files you should put these files in ../assets

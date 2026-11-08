@@ -1,11 +1,11 @@
 [project]
 site_url = "https://www.example.com/"
-site_name = "Documentation"
+site_name = "New Roots Fase 2"
 strict = true
 # site_description = "Your project description"
 # site_author = "Your name"
 
-# copyright = "Copyright &copy; 2026 Your name"
+copyright = "This content is provided for general information only, “as is,” and is not professional advice. Use your own judgment and consult experts before relying on it."
 
 # repo_url = "https://github.com/user/repo"
 # repo_name = "user/repo"
@@ -14,7 +14,8 @@ strict = true
 nav = [
   { "Get started" = "index.md" },
   { "Markdown in 5min" = "markdown.md" },
-  { "test" = "moving checklist.md"}
+  { "test" = "moving checklist.md"},
+  { "Instructies" = "vervangen luchtfilters.md"}
 ]
 
 # extra_css = ["stylesheets/extra.css"]
