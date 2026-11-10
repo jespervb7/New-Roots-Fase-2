@@ -1,0 +1,22 @@
+name: Check "Laatst geüpdatet" dates
+on:
+  pull_request:
+    paths:
+      - "docs/**.md"
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # Check the PR's own commits, not GitHub's temporary merge commit,
+          # and fetch full history so each page's last change can be found.
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+      - name: Check revision_date on changed pages
+        run: python scripts/revision_dates.py check --base origin/${{ github.base_ref }}

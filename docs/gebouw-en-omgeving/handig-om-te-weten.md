@@ -1,3 +1,10 @@
+---
+tags:
+  - Parkeren
+  - Sloten en sleutels
+revision_date: "10 november 2026"
+---
+
 # Good to know
 
 This page shows small tips that are useful to know for New Roots.
@@ -10,7 +17,7 @@ This page shows small tips that are useful to know for New Roots.
 
 [Gemeente Utrecht - Parkeerkorting](https://loket.digitaal.utrecht.nl/nl/producten/parkeerkorting-voor-bezoek-aanvragen)
 
-[est](index.md)
+[est](../index.md)
 
 ## Cilinder met nood- en gevarenfunctie aanvragen
 

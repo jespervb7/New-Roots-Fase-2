@@ -1,173 +1,57 @@
 ---
-icon: lucide/rocket
+title: Welkom bij New Roots Fase 2
+description: Alle praktische informatie over wonen in New Roots Fase 2 op één plek.
+hide:
+  - navigation
+revision_date: "10 november 2026"
 ---
 
-# Get started
+# Welkom bij New Roots Fase 2
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+Op deze site vind je alles wat handig is om te weten als je in New Roots Fase 2 woont: van het vervangen van je luchtfilters tot wie je moet mailen als er iets kapot is. De site wordt gemaakt door en voor bewoners.
 
-## Commands
+!!! tip "Snel iets vinden?"
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+    Gebruik de zoekfunctie rechtsboven, kies hieronder een onderwerp, of bekijk alle pagina's in [Onderwerpen A-Z](tags.md).
 
-  [new]: https://zensical.org/docs/usage/new/
-  [serve]: https://zensical.org/docs/usage/preview/
-  [build]: https://zensical.org/docs/usage/build/
+## Onderwerpen
 
-## Examples
+<div class="grid cards" markdown>
 
-### Admonitions
+-   :material-home-outline: **Mijn woning**
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
+    ---
 
-!!! note
+    Installaties en onderhoud in je appartement, zoals de ventilatie (WTW-unit).
 
-    This is a **note** admonition. Use it to provide helpful information.
+    [:octicons-arrow-right-24: Naar: Mijn woning](mijn-woning/index.md)
 
-!!! warning
+-   :material-office-building-outline: **Gebouw & omgeving**
 
-    This is a **warning** admonition. Be careful!
+    ---
 
-### Details
+    Gemeenschappelijke ruimtes, parkeren, afval en de buurt.
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
+    [:octicons-arrow-right-24: Naar: Gebouw & omgeving](gebouw-en-omgeving/index.md)
 
-??? info "Click to expand for more info"
+-   :material-truck-outline: **Verhuizen**
 
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
+    ---
 
-## Code Blocks
+    Wat je moet regelen als je hier komt wonen of vertrekt.
 
-> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
+    [:octicons-arrow-right-24: Naar: Verhuizen](verhuizen/index.md)
 
-``` python hl_lines="2" title="Code blocks"
-def greet(name):
-    print(f"Hello, {name}!") # (1)!
+-   :material-account-group-outline: **VvE & contact**
 
-greet("Python")
-```
+    ---
 
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
+    Wie je waarvoor benadert: VvE, beheerder en aannemers.
 
-    Code annotations allow to attach notes to lines of code.
+    [:octicons-arrow-right-24: Naar: VvE & contact](vve-en-contact/index.md)
 
-Code can also be highlighted inline: `#!python print("Hello, Python!")`.
+</div>
 
-## Content tabs
+## Meehelpen?
 
-> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
-
-=== "Python"
-
-    ``` python
-    print("Hello from Python!")
-    ```
-
-=== "Rust"
-
-    ``` rs
-    println!("Hello from Rust!");
-    ```
-
-## Diagrams
-
-> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
-
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-## Footnotes
-
-> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
-
-Here's a sentence with a footnote.[^1]
-
-Hover it, to see a tooltip.
-
-[^1]: This is the footnote.
-
-
-## Formatting
-
-> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
-
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
-
-## Icons, Emojis
-
-> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
-
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
-
-## Maths
-
-> Go to [documentation](https://zensical.org/docs/authoring/math/)
-
-$$
-\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
-$$
-
-!!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
-
-<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-
-  document$.subscribe(() => {
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
-</script>
-
-## Task Lists
-
-> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
-
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
-
-## Tooltips
-
-> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
-
-[Hover me][example]
-
-  [example]: https://example.com "I'm a tooltip!"
+Mis je iets of klopt er iets niet? Lees [hoe je kunt bijdragen](bijdragen/index.md). Je hebt er geen technische kennis voor nodig.

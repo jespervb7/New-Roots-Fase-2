@@ -1,34 +1,60 @@
 [project]
-site_url = "https://www.example.com/"
+site_url = "https://jespervb7.github.io/New-Roots-Fase-2/"
 site_name = "New Roots Fase 2"
 strict = true
-# site_description = "Your project description"
-# site_author = "Your name"
+site_description = "Praktische informatie over wonen in New Roots Fase 2, door en voor bewoners."
+site_author = "Jesper van Beemdelust"
 
 copyright = "This content is provided for general information only, “as is,” and is not professional advice. Use your own judgment and consult experts before relying on it."
 
-# repo_url = "https://github.com/user/repo"
-# repo_name = "user/repo"
-# edit_uri = "edit/main/docs/"
+repo_url = "https://github.com/jespervb7/New-Roots-Fase-2"
+repo_name = "jespervb7/New-Roots-Fase-2"
+edit_uri = "edit/main/docs/"
 
+# Each top-level entry is a tab. The first page of a section (index.md) is its landing page.
 nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown.md" },
-  { "test" = "moving checklist.md"},
-  { "Instructies" = "vervangen luchtfilters.md"}
+  { "Home" = [
+    "index.md",
+    { "Onderwerpen A-Z" = "tags.md" },
+  ] },
+  { "Mijn woning" = [
+    "mijn-woning/index.md",
+    { "Installaties" = [
+      { "Luchtfilters vervangen" = "mijn-woning/luchtfilters-vervangen.md" },
+      { "Thermostaat in een app" = "mijn-woning/thermostaat-in-app.md" },
+    ] },
+  ] },
+  { "Gebouw & omgeving" = [
+    "gebouw-en-omgeving/index.md",
+    { "Handig om te weten" = "gebouw-en-omgeving/handig-om-te-weten.md" },
+    { "Openstaande punten" = "gebouw-en-omgeving/openstaande-punten.md" },
+  ] },
+  { "Verhuizen" = [
+    "verhuizen/index.md",
+    { "Verhuischecklist" = "verhuizen/verhuischecklist.md" },
+  ] },
+  { "VvE & contact" = [
+    "vve-en-contact/index.md",
+    { "Contactgegevens" = "vve-en-contact/contactgegevens.md" },
+  ] },
+  { "Bijdragen" = [
+    "bijdragen/index.md",
+    { "Markdown in 5 minuten" = "bijdragen/markdown.md" },
+    { "Opmaakvoorbeelden" = "bijdragen/opmaakvoorbeelden.md" },
+  ] },
 ]
 
-# extra_css = ["stylesheets/extra.css"]
-# extra_javascript = ["javascripts/extra.js"]
+# extra_css = ["stylesheets/lightbox.css"]
+# extra_javascript = ["javascripts/lightbox.js"]
 
 [project.theme]
 # variant = "classic"
-# custom_dir = "overrides"
+custom_dir = "overrides"
 # favicon = "images/favicon.png"
-language = "en"
+language = "nl"
 features = [
   "announce.dismiss",
-  # "content.action.edit",
+  "content.action.edit",
   # "content.action.view",
   "content.code.annotate",
   "content.code.copy",
@@ -36,22 +62,23 @@ features = [
   "content.footnote.tooltips",
   "content.tabs.link",
   "content.tooltips",
-  # "header.autohide",
+  "header.autohide",
   # "navigation.expand",
   "navigation.footer",
   "navigation.indexes",
   "navigation.instant",
   "navigation.instant.prefetch",
-  # "navigation.instant.progress",
+  "navigation.instant.preview",
+  "navigation.instant.progress",
   "navigation.path",
   # "navigation.prune",
   "navigation.sections",
-  # "navigation.tabs",
-  # "navigation.tabs.sticky",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
   "navigation.top",
   "navigation.tracking",
   "search.highlight",
-  # "toc.follow",
+  "toc.follow",
   # "toc.integrate",
 ]
 
@@ -81,16 +108,92 @@ scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
 
-# [[project.extra.social]]
-# icon = "fontawesome/brands/github"
-# link = "https://github.com/user/repo"
+# Footer icons on every page (right-hand side). `name` is the hover text.
+# Only organisation contacts here, never personal details of residents.
+[[project.extra.social]]
+icon = "material/email-outline"
+link = "mailto:vve-newroots2@outlook.com"
+name = "Mail de VvE"
 
-# [[project.extra.social]]
-# icon = "fontawesome/brands/mastodon"
-# link = "https://fosstodon.org/@user"
+[[project.extra.social]]
+icon = "material/card-account-mail-outline"
+link = "https://jespervb7.github.io/New-Roots-Fase-2/vve-en-contact/contactgegevens/"
+name = "Alle contactgegevens"
 
-# [[project.extra.status]]
-new = "Recently added"
+[[project.extra.social]]
+icon = "material/lightbulb-on-outline"
+link = "https://github.com/jespervb7/New-Roots-Fase-2/issues/new?template=1-nieuwe-informatie.yml"
+name = "Idee of tip doorgeven"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/jespervb7/New-Roots-Fase-2"
+name = "Broncode op GitHub"
+
+# Announcement bar at the top of every page (template: overrides/main.html).
+# - text:      the message (required; leave empty "" to hide the bar)
+# - link:      optional link, e.g. a page "bijdragen/" or a full https:// URL
+# - link_text: optional text for the link (default: "Lees meer")
+# - until:     optional last day to show it (YYYY-MM-DD); it disappears automatically after that
+# Visitors can close the bar; changing the text shows it to everyone again.
+[project.extra.announcement]
+text = "Deze site is nieuw en wordt gemaakt door bewoners. Mis je iets of klopt er iets niet?"
+link = "bijdragen/"
+link_text = "Help mee"
+until = "2026-12-31"
+
+# Tags: pages list their topics under `tags:` in the front matter; docs/tags.md shows
+# the overview. Only tags in tags_allowed may be used (catches typos); add new ones here.
+
+# Share cards: a preview image per page for links shared in WhatsApp, Signal, email etc.
+# Uses each page's title and description (fallback: site_description).
+# Background: picture of the building (social-cards/background.webp) with a 60% dark green
+# tint on top so the text stays readable. Colours can be changed freely.
+# Fonts come from social-cards/fonts (committed), so builds never download them;
+# see social-cards/README.md.
+[project.plugins.social]
+cache_dir = "social-cards"
+cards_layout_options = { background_image = "social-cards/background.webp", background_color = "#1f4d3a99", color = "#ffffff" }
+
+# llms.txt: a summary of the site for AI assistants, generated on every build at
+# /llms.txt (links per page) and /llms-full.txt (all page text in one file).
+# New pages are picked up automatically through the section patterns below.
+[project.plugins.llmstxt]
+full_output = "llms-full.txt"
+markdown_description = """
+New Roots Fase 2 is een appartementencomplex in Utrecht. Deze site is gemaakt door en
+voor bewoners en bundelt praktische informatie over wonen in het complex: installaties
+en onderhoud in de woning (zoals de WTW-ventilatie), het gebouw en de omgeving,
+verhuizen, en contactgegevens van de VvE (Vereniging van Eigenaars) en de beheerder.
+De informatie is in het Nederlands. Het is geen officiële site van de VvE of de
+beheerder; controleer belangrijke zaken bij de genoemde bron.
+"""
+
+[project.plugins.llmstxt.sections]
+"Start" = ["index.md", "tags.md"]
+"Mijn woning" = ["mijn-woning/*.md"]
+"Gebouw en omgeving" = ["gebouw-en-omgeving/*.md"]
+"Verhuizen" = ["verhuizen/*.md"]
+"VvE en contact" = ["vve-en-contact/*.md"]
+"Optional" = ["bijdragen/*.md"]
+
+[project.plugins.tags]
+tags_allowed = [
+  "Afval",
+  "Bijdragen",
+  "Contact",
+  "Fietsen",
+  "Onderhoud",
+  "Parkeren",
+  "Sloten en sleutels",
+  "Ventilatie",
+  "Verhuizen",
+  "Verwarming",
+  "VvE",
+]
+
+[project.extra.status]
+new = "Nieuw toegevoegd"
 
 [project.markdown_extensions]
 abbr = {}
@@ -114,11 +217,15 @@ pymdownx.keys = {}
 pymdownx.magiclink = {}
 pymdownx.mark = {}
 pymdownx.smartsymbols = {}
-# pymdownx.snippets.base_path = "includes"
+# Glossary: includes/afkortingen.md is appended to every page, so each abbreviation gets a tooltip site-wide.
+pymdownx.snippets.base_path = ["includes"]
+pymdownx.snippets.auto_append = ["afkortingen.md"]
+pymdownx.snippets.check_paths = true
 pymdownx.superfences.custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
 pymdownx.tabbed.alternate_style = true
 pymdownx.tabbed.combine_header_slug = true
 pymdownx.tasklist.custom_checkbox = true
+pymdownx.tasklist.clickable_checkbox = true
 pymdownx.tilde = {}

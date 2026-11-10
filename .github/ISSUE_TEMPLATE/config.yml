@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔎 Eerst zoeken op de website
+    url: https://jespervb7.github.io/New-Roots-Fase-2/
+    about: Misschien staat het antwoord al op de site. Gebruik de zoekfunctie rechtsboven.
+  - name: 📖 Uitleg over bijdragen
+    url: https://jespervb7.github.io/New-Roots-Fase-2/bijdragen/
+    about: Stap-voor-stap uitleg over hoe je informatie doorgeeft of zelf een pagina aanpast.
+  - name: 🏢 Probleem in het gebouw? Neem contact op met VvE of beheerder
+    url: https://jespervb7.github.io/New-Roots-Fase-2/vve-en-contact/contactgegevens/
+    about: Deze issues zijn alleen voor de content op de website. Voor storingen, reparaties of vragen over het gebouw mail je de VvE of de beheerder (JWA).

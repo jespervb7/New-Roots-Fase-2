@@ -1,0 +1,34 @@
+# robots.txt for the New Roots Fase 2 residents' site
+#
+# Choice: search engines may NOT index the site (it is meant to be shared by
+# link between residents), but AI assistants MAY read it so they can answer
+# residents' questions. AI tools can also use /llms.txt.
+#
+# Note: on GitHub Pages this file is served at
+# https://jespervb7.github.io/New-Roots-Fase-2/robots.txt, while crawlers only
+# read robots.txt at the root of a domain. Until the site has its own domain,
+# the noindex meta tags in overrides/main.html are what actually keep pages out
+# of Google and Bing.
+
+# AI assistants and AI search: allowed
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: CCBot
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: cohere-ai
+User-agent: MistralAI-User
+Allow: /
+
+# Everyone else, including search engines: not allowed
+User-agent: *
+Disallow: /
