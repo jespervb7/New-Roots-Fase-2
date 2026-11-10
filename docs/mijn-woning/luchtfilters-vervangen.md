@@ -16,7 +16,7 @@ revision_date: "10 november 2026"
 
     [Waar vind ik het serienummer?](#serienummer-van-de-wtw-unit-vinden){ .md-button .md-button--primary }
 
-# Bestelling plaatsen voor nieuwe filters
+## Bestelling plaatsen voor nieuwe filters
 
 Vooraf aan het bestellen is het goed om dit hoofdstuk van [deze video](https://youtu.be/6N7PQU1cBvQ&t=30) te bekijken tot 01:00.
 
@@ -27,7 +27,7 @@ Navigeer daarna naar de [webshop van Itho Daalderop](https://webshop.ithodaalder
 Navigeer naar de juiste WTW Unit (HRU ECO 200) en bestel vervolgens de gekoze filter.
 ![](../images/vervangen_luchtfilters/step2_select_the_right_unit_and_filter.png)
 
-# Filter vervangen
+## Filter vervangen
 
 Er is een instructie video van Itho Daalderop waarin zij dit laten zien.
 
@@ -40,9 +40,9 @@ In deze video hebben ze het ook over het resetten van de filterwaarschuwing, ech
 **Info hoe wij deze zouden moeten resetten** ![](../images/vervangen_luchtfilters/How%20to%20reset%20CO2%20sensor.png)
 
 
-# FAQ
+## FAQ
 
-## Serienummer van de WTW-unit vinden
+### Serienummer van de WTW-unit vinden
 
 Het serienummer van de WTW-Unit is aan de rechterzijde van de machine te vinden. Een voorbeeld van het serienummer:
 
@@ -52,6 +52,6 @@ Het serienummer van de WTW-Unit is aan de rechterzijde van de machine te vinden.
 
 ![](../images/vervangen_luchtfilters/WTW_Unit_serienummer.png)
 
-## Wanneer moet ik het filter vervangen?
+### Wanneer moet ik het filter vervangen?
 
 Na het lezen van de [officiele handleiding](https://ithodaalderop.compano.com/Data/Environments/000001/Attachment/Bijlage/A04_Ventilatie/A04_02_Gebalanceerd/A04_02_01_HRU/A04_02_01_01_200/B01_05_MAN/25_0096%20Gebruikerskaart%20Ventilatie%20%20HRU%20200_WEB.pdf) of [deze gedownloade versie](../assets/HRU%20ECO%20200%20-%20gebruikerskaart.pdf) mocht deze handleiding online niet meer beschikbaar zijn dan zou het zo moeten zijn dat er een oranje lampje op de CO2 sensor knippert.
