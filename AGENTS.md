@@ -14,10 +14,10 @@ The site is built with [Zensical](https://zensical.org/docs/) and published publ
 
 | Path | Purpose |
 | --- | --- |
-| `docs/` | Source Markdown pages. This is the content of the site. |
+| `docs/` | Source Markdown pages: `index.md` (home) plus one folder per tab (`mijn-woning/`, `gebouw-en-omgeving/`, `verhuizen/`, `vve-en-contact/`, `bijdragen/`), each with an `index.md` landing page. |
 | `docs/images/<page-name>/` | Screenshots and images used by a specific page (one subfolder per page). |
 | `docs/assets/` | Downloadable files such as manuals and PDFs, and site-wide assets. |
-| `docs/TODO.md` | Open topics/issues in the complex that may later become pages. |
+| `docs/gebouw-en-omgeving/openstaande-punten.md` | Open issues in the complex that may later become pages. |
 | `zensical.toml` | Site config: name, `nav`, theme, and enabled Markdown extensions. |
 | `site/` | Generated build output. Never edit by hand; it is not committed. |
 | `.github/workflows/docs.yml` | Builds and deploys the site to GitHub Pages on push to `main`. |
@@ -53,8 +53,8 @@ There are no unit tests or linters. **A passing `uv run zensical build --clean -
   tags: Luchtfilters
   ---
   ```
-- For how-to pages, follow the pattern of `docs/vervangen luchtfilters.md`: a tip/summary at the top, numbered or clearly headed steps with screenshots, then a `FAQ` section.
-- Use Zensical features where they help readability: admonitions (`!!! tip`, `!!! warning`) for important notes, collapsible `???` blocks for FAQs, task lists for checklists, buttons (`{ .md-button }`) for primary links. See `docs/markdown.md` and `docs/index.md` for examples of the enabled extensions.
+- For how-to pages, follow the pattern of `docs/mijn-woning/luchtfilters-vervangen.md`: a tip/summary at the top, numbered or clearly headed steps with screenshots, then a `FAQ` section.
+- Use Zensical features where they help readability: admonitions (`!!! tip`, `!!! warning`) for important notes, collapsible `???` blocks for FAQs, task lists for checklists, buttons (`{ .md-button }`) for primary links. See `docs/bijdragen/markdown.md` and `docs/bijdragen/opmaakvoorbeelden.md` for examples of the enabled extensions.
 - Prefer one topic per page. If information relates to an existing page, extend that page instead of creating a near-duplicate, and cross-link related pages.
 
 ### Sources and reliability
@@ -71,11 +71,11 @@ There are no unit tests or linters. **A passing `uv run zensical build --clean -
 
 ## Files, images, and navigation
 
-- **New pages**: create them in `docs/` with lowercase, hyphenated filenames (e.g. `afval-scheiden.md`). Some existing files use spaces; don't rename them unless asked, and if you do, update all links and `nav`.
-- **Navigation**: every page that should be visible must be added to the `nav` array in `zensical.toml`, with a clear Dutch label. Keep `nav` grouped logically (e.g. Instructies, Contact, Handig om te weten, Verhuizen) as the site grows.
-- **Images**: put them in `docs/images/<page-name>/` with descriptive filenames (`step1_navigate_to_filters.png`), and always provide alt text: `![Itho webshop keuzewijzer](images/...)`.
+- **New pages**: create them in the folder of the tab they belong to (e.g. `docs/gebouw-en-omgeving/afval-scheiden.md`) with lowercase, hyphenated filenames, and link them from that tab's `index.md`. If a page moves, update all links, `nav`, and the URLs in `.github/ISSUE_TEMPLATE/config.yml`.
+- **Navigation**: every page that should be visible must be added to the `nav` array in `zensical.toml`, with a clear Dutch label. Each top-level `nav` entry is a tab (`navigation.tabs`); its first item is the folder's `index.md` landing page. Add pages to an existing tab rather than creating new tabs; group related pages under a sub-section (like `Installaties` under `Mijn woning`). When a planned topic on a landing page's "Nog geen pagina" list gets its own page, move it into the page list.
+- **Images**: put them in `docs/images/<page-name>/` with descriptive filenames (`step1_navigate_to_filters.png`), and always provide alt text: `![Itho webshop keuzewijzer](../images/...)` (pages sit one folder deep, so use `../images/` and `../assets/`).
 - **Downloads/manuals**: put them in `docs/assets/`.
-- Use relative links between pages (`[contactgegevens](contact-info.md)`). Paths with spaces must be URL-encoded (`%20`) in links.
+- Use relative links between pages (`[contactgegevens](../vve-en-contact/contactgegevens.md)`). Paths with spaces must be URL-encoded (`%20`) in links.
 - Keep files reasonably small; compress large screenshots before adding them.
 
 ## Configuration changes

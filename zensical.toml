@@ -3,7 +3,7 @@ site_url = "https://jespervb7.github.io/New-Roots-Fase-2/"
 site_name = "New Roots Fase 2"
 strict = true
 # site_description = "Your project description"
-# site_author = "Your name"
+site_author = "Jesper van Beemdelust"
 
 copyright = "This content is provided for general information only, “as is,” and is not professional advice. Use your own judgment and consult experts before relying on it."
 
@@ -11,12 +11,33 @@ repo_url = "https://github.com/jespervb7/New-Roots-Fase-2"
 repo_name = "jespervb7/New-Roots-Fase-2"
 edit_uri = "edit/main/docs/"
 
+# Each top-level entry is a tab. The first page of a section (index.md) is its landing page.
 nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown.md" },
-  { "test" = "moving checklist.md"},
-  { "Instructies" = "vervangen luchtfilters.md"},
-  { "Bijdragen" = "how to contribute.md"}
+  { "Home" = "index.md" },
+  { "Mijn woning" = [
+    "mijn-woning/index.md",
+    { "Installaties" = [
+      { "Luchtfilters vervangen" = "mijn-woning/luchtfilters-vervangen.md" },
+    ] },
+  ] },
+  { "Gebouw & omgeving" = [
+    "gebouw-en-omgeving/index.md",
+    { "Handig om te weten" = "gebouw-en-omgeving/handig-om-te-weten.md" },
+    { "Openstaande punten" = "gebouw-en-omgeving/openstaande-punten.md" },
+  ] },
+  { "Verhuizen" = [
+    "verhuizen/index.md",
+    { "Verhuischecklist" = "verhuizen/verhuischecklist.md" },
+  ] },
+  { "VvE & contact" = [
+    "vve-en-contact/index.md",
+    { "Contactgegevens" = "vve-en-contact/contactgegevens.md" },
+  ] },
+  { "Bijdragen" = [
+    "bijdragen/index.md",
+    { "Markdown in 5 minuten" = "bijdragen/markdown.md" },
+    { "Opmaakvoorbeelden" = "bijdragen/opmaakvoorbeelden.md" },
+  ] },
 ]
 
 # extra_css = ["stylesheets/extra.css"]
@@ -26,7 +47,7 @@ nav = [
 # variant = "classic"
 # custom_dir = "overrides"
 # favicon = "images/favicon.png"
-language = "en"
+language = "nl"
 features = [
   "announce.dismiss",
   "content.action.edit",
@@ -47,8 +68,8 @@ features = [
   "navigation.path",
   # "navigation.prune",
   "navigation.sections",
-  # "navigation.tabs",
-  # "navigation.tabs.sticky",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
   "navigation.top",
   "navigation.tracking",
   "search.highlight",

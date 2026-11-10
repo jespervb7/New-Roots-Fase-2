@@ -68,7 +68,7 @@ De site draait nu op <http://localhost:8000> en ververst automatisch als je een 
 
 Een paar afspraken:
 
-- Pagina's staan in `docs/`. Afbeeldingen voor een pagina zet je in `docs/images/<paginanaam>/`, downloadbare bestanden zoals handleidingen in `docs/assets/`.
+- Pagina's staan in `docs/`, met een map per tabblad (bijv. `docs/mijn-woning/`). Afbeeldingen voor een pagina zet je in `docs/images/<paginanaam>/`, downloadbare bestanden zoals handleidingen in `docs/assets/`.
 - Voeg een nieuwe pagina toe aan `nav` in `zensical.toml`, anders staat hij niet in het menu.
 - Controleer je werk met `uv run zensical build --clean --strict`. Deze moet zonder waarschuwingen slagen.
 - Werk in een eigen branch en open een pull request naar `main`.
