@@ -1,4 +1,6 @@
 ---
+tags:
+  - Verhuizen
 revision_date: "10 november 2026"
 ---
 

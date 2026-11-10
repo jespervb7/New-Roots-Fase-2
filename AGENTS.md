@@ -47,15 +47,18 @@ There are no unit tests or linters. **A passing `uv run zensical build --clean -
 
 ### Page structure
 - Every page starts with a single `# Title`.
-- Add front matter with at least `title` and `description`; use `status: new` for freshly added pages and `tags` where helpful:
+- Add front matter with at least `title` and `description`; use `status: new` for freshly added pages and give content pages 1–3 `tags`:
   ```yaml
   ---
   title: Hoe vervang ik mijn luchtfilters?
   description: Waar je luchtfilters koopt, welke je nodig hebt en hoe je ze plaatst.
   status: new
-  tags: Luchtfilters
+  tags:
+    - Ventilatie
+    - Onderhoud
   ---
   ```
+- **Tags** group pages by topic across tabs; they appear as chips on the page and on the overview `docs/tags.md` ("Onderwerpen A-Z"). Only tags listed in `tags_allowed` under `[project.plugins.tags]` in `zensical.toml` are accepted: the build fails on any other tag. Reuse existing tags; add a new one to `tags_allowed` (alphabetical, Dutch, capitalised) only for a real new topic. Landing pages (`index.md`) don't get tags.
 - For how-to pages, follow the pattern of `docs/mijn-woning/luchtfilters-vervangen.md`: a tip/summary at the top, numbered or clearly headed steps with screenshots, then a `FAQ` section.
 - Use Zensical features where they help readability: admonitions (`!!! tip`, `!!! warning`) for important notes, collapsible `???` blocks for FAQs, task lists for checklists, buttons (`{ .md-button }`) for primary links. See `docs/bijdragen/markdown.md` and `docs/bijdragen/opmaakvoorbeelden.md` for examples of the enabled extensions.
 - Prefer one topic per page. If information relates to an existing page, extend that page instead of creating a near-duplicate, and cross-link related pages.

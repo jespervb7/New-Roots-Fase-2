@@ -13,7 +13,10 @@ edit_uri = "edit/main/docs/"
 
 # Each top-level entry is a tab. The first page of a section (index.md) is its landing page.
 nav = [
-  { "Home" = "index.md" },
+  { "Home" = [
+    "index.md",
+    { "Onderwerpen A-Z" = "tags.md" },
+  ] },
   { "Mijn woning" = [
     "mijn-woning/index.md",
     { "Installaties" = [
@@ -122,6 +125,23 @@ text = "Deze site is nieuw en wordt gemaakt door bewoners. Mis je iets of klopt 
 link = "bijdragen/"
 link_text = "Help mee"
 until = "2026-12-31"
+
+# Tags: pages list their topics under `tags:` in the front matter; docs/tags.md shows
+# the overview. Only tags in tags_allowed may be used (catches typos); add new ones here.
+[project.plugins.tags]
+tags_allowed = [
+  "Afval",
+  "Bijdragen",
+  "Contact",
+  "Fietsen",
+  "Onderhoud",
+  "Parkeren",
+  "Sloten en sleutels",
+  "Ventilatie",
+  "Verhuizen",
+  "Verwarming",
+  "VvE",
+]
 
 [project.extra.status]
 new = "Nieuw toegevoegd"

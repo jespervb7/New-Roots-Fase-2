@@ -2,7 +2,9 @@
 title: Hoe vervanging ik mijn luchtfilters?
 description: Deze pagina legt jou uit waar je luchtfilters kan kopen, welke dit zijn en hoe je dit moet installeren.
 status: new
-tags: Luchtfilters
+tags:
+  - Ventilatie
+  - Onderhoud
 revision_date: "10 november 2026"
 ---
 

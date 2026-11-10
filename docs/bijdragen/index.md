@@ -2,7 +2,8 @@
 title: Hoe kan ik bijdragen?
 description: Zo help je mee om deze site aan te vullen en actueel te houden, met of zonder technische kennis.
 status: new
-tags: Bijdragen
+tags:
+  - Bijdragen
 revision_date: "10 november 2026"
 ---
 
@@ -54,6 +55,17 @@ Wij bekijken je wijziging en zetten hem online zodra hij is goedgekeurd.
 ??? info "Een nieuwe pagina toevoegen"
 
     Klik in de map `docs` op **Add file → Create new file** en geef het bestand een naam in kleine letters met streepjes, bijvoorbeeld `afval-scheiden.md`. Vermeld in je pull request dat het om een nieuwe pagina gaat. Dan zorgen wij dat hij in het menu komt.
+
+    Wil je de pagina ook onder een onderwerp laten vallen in [Onderwerpen A-Z](../tags.md)? Zet bovenaan bijvoorbeeld:
+
+    ```yaml
+    ---
+    tags:
+      - Afval
+    ---
+    ```
+
+    Kies een onderwerp dat al bestaat. Een nieuw onderwerp voegen wij toe.
 
 ## Optie 3: Lokaal werken (voor gevorderden)
 

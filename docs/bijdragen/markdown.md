@@ -1,5 +1,7 @@
 ---
 icon: simple/markdown
+tags:
+  - Bijdragen
 revision_date: "10 november 2026"
 ---
 

@@ -12,7 +12,7 @@ Op deze site vind je alles wat handig is om te weten als je in New Roots Fase 2 
 
 !!! tip "Snel iets vinden?"
 
-    Gebruik de zoekfunctie rechtsboven, of kies hieronder een onderwerp.
+    Gebruik de zoekfunctie rechtsboven, kies hieronder een onderwerp, of bekijk alle pagina's in [Onderwerpen A-Z](tags.md).
 
 ## Onderwerpen
 

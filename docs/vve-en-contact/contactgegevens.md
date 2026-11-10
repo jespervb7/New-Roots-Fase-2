@@ -1,4 +1,7 @@
 ---
+tags:
+  - Contact
+  - VvE
 revision_date: "10 november 2026"
 ---
 

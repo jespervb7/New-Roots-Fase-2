@@ -1,4 +1,7 @@
 ---
+tags:
+  - Parkeren
+  - Sloten en sleutels
 revision_date: "10 november 2026"
 ---
 
