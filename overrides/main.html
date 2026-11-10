@@ -1,0 +1,39 @@
+{#-
+  Theme overrides for New Roots Fase 2.
+
+  Announcement bar: shown at the top of every page. The text is set in
+  zensical.toml under [project.extra.announcement]; nothing to change here.
+-#}
+{% extends "base.html" %}
+
+{% block announce -%}
+  {%- set a = config.extra.announcement -%}
+  {%- if a and a.text -%}
+    <div class="nr-announce"{% if a.until %} data-until="{{ a.until }}"{% endif %}>
+      <span class="nr-announce__icon">{% include ".icons/material/bullhorn-outline.svg" %}</span>
+      <span>
+        {{ a.text }}
+        {%- if a.link %}
+          <a href="{{ a.link | url }}">{{ a.link_text or "Lees meer" }}</a>
+        {%- endif %}
+      </span>
+    </div>
+    {%- if a.until %}
+    <script>
+      (function () {
+        // Hide the announcement automatically after its "until" date.
+        var until = new Date("{{ a.until }}T23:59:59");
+        if (!isNaN(until) && new Date() > until) {
+          var el = document.querySelector("[data-md-component=announce]");
+          if (el) el.hidden = true;
+        }
+      })();
+    </script>
+    {%- endif %}
+    <style>
+      .nr-announce { display: flex; gap: .6rem; align-items: center; }
+      .nr-announce__icon svg { width: 1.2rem; height: 1.2rem; fill: currentColor; display: block; }
+      .md-banner .nr-announce a { color: inherit; text-decoration: underline; font-weight: 700; }
+    </style>
+  {%- endif -%}
+{%- endblock %}

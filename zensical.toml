@@ -45,7 +45,7 @@ nav = [
 
 [project.theme]
 # variant = "classic"
-# custom_dir = "overrides"
+custom_dir = "overrides"
 # favicon = "images/favicon.png"
 language = "nl"
 features = [
@@ -111,8 +111,20 @@ toggle.name = "Switch to system preference"
 # icon = "fontawesome/brands/mastodon"
 # link = "https://fosstodon.org/@user"
 
-# [[project.extra.status]]
-new = "Recently added"
+# Announcement bar at the top of every page (template: overrides/main.html).
+# - text:      the message (required; leave empty "" to hide the bar)
+# - link:      optional link, e.g. a page "bijdragen/" or a full https:// URL
+# - link_text: optional text for the link (default: "Lees meer")
+# - until:     optional last day to show it (YYYY-MM-DD); it disappears automatically after that
+# Visitors can close the bar; changing the text shows it to everyone again.
+[project.extra.announcement]
+text = "Deze site is nieuw en wordt gemaakt door bewoners. Mis je iets of klopt er iets niet?"
+link = "bijdragen/"
+link_text = "Help mee"
+until = "2026-12-31"
+
+[project.extra.status]
+new = "Nieuw toegevoegd"
 
 [project.markdown_extensions]
 abbr = {}

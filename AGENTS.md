@@ -20,6 +20,7 @@ The site is built with [Zensical](https://zensical.org/docs/) and published publ
 | `docs/gebouw-en-omgeving/openstaande-punten.md` | Open issues in the complex that may later become pages. |
 | `zensical.toml` | Site config: name, `nav`, theme, and enabled Markdown extensions. |
 | `includes/afkortingen.md` | Site-wide glossary of abbreviations, auto-appended to every page (see `includes/README.md`). |
+| `overrides/main.html` | Theme override (`custom_dir`). Renders the announcement bar from `[project.extra.announcement]` in `zensical.toml`. |
 | `site/` | Generated build output. Never edit by hand; it is not committed. |
 | `.github/workflows/docs.yml` | Builds and deploys the site to GitHub Pages on push to `main`. |
 
@@ -85,6 +86,7 @@ There are no unit tests or linters. **A passing `uv run zensical build --clean -
 - Make all site configuration changes in `zensical.toml`. Do not introduce another docs generator (MkDocs, Docusaurus, etc.) or a custom build script.
 - Only enable a Markdown extension or theme feature if a page actually uses it, and validate with a strict build afterward.
 - Keep `.github/workflows/docs.yml` and the pre-commit hook in line with any change to the build command.
+- **Announcement bar**: to post or change a notice (e.g. maintenance, a VvE meeting), edit `text`, `link`, `link_text` and `until` under `[project.extra.announcement]` in `zensical.toml`; set `text = ""` to remove it. Always set `until` (YYYY-MM-DD) so old notices disappear on their own. Keep it to one short Dutch sentence and do not put personal data or codes in it. Only change `overrides/main.html` to change how the bar looks.
 - **"Laatst geüpdatet" dates**: every page has `revision_date: "10 november 2026"` (Dutch format) in its front matter, which Zensical shows at the bottom of the page. It must equal the date of the last commit that changed the page.
   - The `revision-date` pre-commit hook (`scripts/revision_dates.py update`) sets it to today on every changed page. When it changes a file the commit stops; `git add` the page and commit again.
   - On pull requests, `.github/workflows/check-revision-dates.yml` runs `scripts/revision_dates.py check` and fails if a changed page's date doesn't match its last commit.
