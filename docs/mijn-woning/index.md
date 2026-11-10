@@ -1,7 +1,7 @@
 ---
 title: Mijn woning
 description: Installaties, onderhoud en handleidingen voor je appartement.
-revision_date: "10 november 2026"
+revision_date: "11 november 2026"
 ---
 
 # Mijn woning
@@ -11,6 +11,7 @@ Alles over de installaties en het onderhoud in je eigen appartement.
 ## Installaties
 
 - [Luchtfilters vervangen](luchtfilters-vervangen.md): welke filters je nodig hebt voor de WTW-unit (warmteterugwinning, het ventilatiesysteem), waar je ze koopt en hoe je ze plaatst.
+- [Thermostaat bedienen met een app](thermostaat-in-app.md): je Danfoss Icon2-thermostaten op je telefoon bedienen via Danfoss Ally of Home Assistant, en wat dat kost.
 
 ## Nog geen pagina
 

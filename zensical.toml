@@ -21,6 +21,7 @@ nav = [
     "mijn-woning/index.md",
     { "Installaties" = [
       { "Luchtfilters vervangen" = "mijn-woning/luchtfilters-vervangen.md" },
+      { "Thermostaat in een app" = "mijn-woning/thermostaat-in-app.md" },
     ] },
   ] },
   { "Gebouw & omgeving" = [
