@@ -154,6 +154,28 @@ until = "2026-12-31"
 cache_dir = "social-cards"
 cards_layout_options = { background_image = "social-cards/background.webp", background_color = "#1f4d3a99", color = "#ffffff" }
 
+# llms.txt: a summary of the site for AI assistants, generated on every build at
+# /llms.txt (links per page) and /llms-full.txt (all page text in one file).
+# New pages are picked up automatically through the section patterns below.
+[project.plugins.llmstxt]
+full_output = "llms-full.txt"
+markdown_description = """
+New Roots Fase 2 is een appartementencomplex in Utrecht. Deze site is gemaakt door en
+voor bewoners en bundelt praktische informatie over wonen in het complex: installaties
+en onderhoud in de woning (zoals de WTW-ventilatie), het gebouw en de omgeving,
+verhuizen, en contactgegevens van de VvE (Vereniging van Eigenaars) en de beheerder.
+De informatie is in het Nederlands. Het is geen officiële site van de VvE of de
+beheerder; controleer belangrijke zaken bij de genoemde bron.
+"""
+
+[project.plugins.llmstxt.sections]
+"Start" = ["index.md", "tags.md"]
+"Mijn woning" = ["mijn-woning/*.md"]
+"Gebouw en omgeving" = ["gebouw-en-omgeving/*.md"]
+"Verhuizen" = ["verhuizen/*.md"]
+"VvE en contact" = ["vve-en-contact/*.md"]
+"Optional" = ["bijdragen/*.md"]
+
 [project.plugins.tags]
 tags_allowed = [
   "Afval",

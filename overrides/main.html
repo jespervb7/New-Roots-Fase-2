@@ -3,8 +3,18 @@
 
   Announcement bar: shown at the top of every page. The text is set in
   zensical.toml under [project.extra.announcement]; nothing to change here.
+
+  Search engines: every page tells Google and Bing not to index it (the site
+  is shared by link between residents). AI crawlers are not blocked; see
+  docs/robots.txt.
 -#}
 {% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="bingbot" content="noindex, nofollow">
+{% endblock %}
 
 {% block announce -%}
   {%- set a = config.extra.announcement -%}
