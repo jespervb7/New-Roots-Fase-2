@@ -43,7 +43,7 @@ There are no unit tests or linters. **A passing `uv run zensical build --clean -
 - The site content is primarily **Dutch**. Write new pages in Dutch unless asked otherwise, and keep the language of an existing page consistent when editing it.
 - Write for residents: short sentences, concrete steps, no jargon. Explain technical terms the first time (e.g. "WTW-unit (warmteterugwinning, het ventilatiesysteem)").
 - **Abbreviations** (VvE, WTW, HRU, …): when a page uses an abbreviation that is not yet in `includes/afkortingen.md`, add it there (`*[AFK]: Uitleg`, alphabetical, plain Dutch). It then gets a tooltip on every page automatically; do not define abbreviations inside individual pages.
-- Lead with the answer or action; put background and details after.
+- Lead with the answer or action; put background and details after. The first paragraph under the `# Title` is also what the hover preview (`navigation.instant.preview`) shows when another page links here, so make it a one- or two-sentence summary of the page.
 
 ### Page structure
 - Every page starts with a single `# Title`.
