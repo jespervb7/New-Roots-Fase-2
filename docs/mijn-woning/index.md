@@ -1,6 +1,7 @@
 ---
 title: Mijn woning
 description: Installaties, onderhoud en handleidingen voor je appartement.
+revision_date:
 ---
 
 # Mijn woning
