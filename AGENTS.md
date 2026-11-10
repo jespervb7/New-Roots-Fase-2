@@ -19,6 +19,7 @@ The site is built with [Zensical](https://zensical.org/docs/) and published publ
 | `docs/assets/` | Downloadable files such as manuals and PDFs, and site-wide assets. |
 | `docs/gebouw-en-omgeving/openstaande-punten.md` | Open issues in the complex that may later become pages. |
 | `zensical.toml` | Site config: name, `nav`, theme, and enabled Markdown extensions. |
+| `includes/afkortingen.md` | Site-wide glossary of abbreviations, auto-appended to every page (see `includes/README.md`). |
 | `site/` | Generated build output. Never edit by hand; it is not committed. |
 | `.github/workflows/docs.yml` | Builds and deploys the site to GitHub Pages on push to `main`. |
 
@@ -40,6 +41,7 @@ There are no unit tests or linters. **A passing `uv run zensical build --clean -
 ### Language and tone
 - The site content is primarily **Dutch**. Write new pages in Dutch unless asked otherwise, and keep the language of an existing page consistent when editing it.
 - Write for residents: short sentences, concrete steps, no jargon. Explain technical terms the first time (e.g. "WTW-unit (warmteterugwinning, het ventilatiesysteem)").
+- **Abbreviations** (VvE, WTW, HRU, …): when a page uses an abbreviation that is not yet in `includes/afkortingen.md`, add it there (`*[AFK]: Uitleg`, alphabetical, plain Dutch). It then gets a tooltip on every page automatically; do not define abbreviations inside individual pages.
 - Lead with the answer or action; put background and details after.
 
 ### Page structure

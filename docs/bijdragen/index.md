@@ -75,7 +75,7 @@ Een paar afspraken:
 
 ## Richtlijnen voor goede inhoud
 
-- **Schrijf voor je buren.** Gebruik korte zinnen en concrete stappen, en leg vaktermen uit.
+- **Schrijf voor je buren.** Gebruik korte zinnen en concrete stappen, en leg vaktermen uit. Gebruik je een afkorting (zoals VvE of WTW)? Zet de uitleg dan in `includes/afkortingen.md`; dan krijgt de afkorting op de hele site automatisch een uitleg als je eroverheen gaat.
 - **Noem je bron.** Link naar de officiële handleiding, de VvE-mail of de website van de gemeente. Sla een kopie op in `docs/assets/` als een handleiding offline kan gaan.
 - **Wees eerlijk over onzekerheid.** Heb je iets zelf uitgezocht maar is het niet officieel bevestigd? Zeg dat dan.
 - **Voeg screenshots of foto's toe** als die helpen, en zorg dat er geen persoonlijke spullen of mensen op staan.

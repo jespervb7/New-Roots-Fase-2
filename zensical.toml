@@ -136,7 +136,10 @@ pymdownx.keys = {}
 pymdownx.magiclink = {}
 pymdownx.mark = {}
 pymdownx.smartsymbols = {}
-# pymdownx.snippets.base_path = "includes"
+# Glossary: includes/afkortingen.md is appended to every page, so each abbreviation gets a tooltip site-wide.
+pymdownx.snippets.base_path = ["includes"]
+pymdownx.snippets.auto_append = ["afkortingen.md"]
+pymdownx.snippets.check_paths = true
 pymdownx.superfences.custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
