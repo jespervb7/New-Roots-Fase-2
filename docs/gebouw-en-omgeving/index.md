@@ -1,6 +1,7 @@
 ---
 title: Gebouw & omgeving
 description: Gemeenschappelijke ruimtes, parkeren, afval en de buurt rondom New Roots Fase 2.
+revision_date: "10 november 2026"
 ---
 
 # Gebouw & omgeving

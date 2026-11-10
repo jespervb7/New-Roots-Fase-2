@@ -1,3 +1,7 @@
+---
+revision_date: "10 november 2026"
+---
+
 # Good to know
 
 This page shows small tips that are useful to know for New Roots.

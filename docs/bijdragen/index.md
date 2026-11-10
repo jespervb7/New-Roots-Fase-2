@@ -3,6 +3,7 @@ title: Hoe kan ik bijdragen?
 description: Zo help je mee om deze site aan te vullen en actueel te houden, met of zonder technische kennis.
 status: new
 tags: Bijdragen
+revision_date: "10 november 2026"
 ---
 
 # Hoe kan ik bijdragen?
@@ -43,6 +44,8 @@ Wil je de tekst zelf aanpassen? Dat kan rechtstreeks in je browser.
 1. Ga op deze site naar de pagina die je wilt aanpassen en klik rechtsboven de titel op het potloodje :material-file-edit-outline:. Je komt dan direct in de editor van die pagina op GitHub.
 2. Log in als dat gevraagd wordt. De eerste keer vraagt GitHub om een eigen kopie (*fork*) te maken; klik op **Fork this repository**.
 3. Pas de tekst aan. De pagina's zijn geschreven in [Markdown](https://zensical.org/docs/authoring/markdown/), een eenvoudige opmaaktaal. Kijk bij twijfel hoe andere pagina's het doen.
+
+    Zet bovenaan bij `revision_date` de datum van vandaag, bijvoorbeeld `revision_date: "10 november 2026"`. Die datum staat onderaan de pagina als *Laatst geüpdatet*. Vergeet je het? Dan zie je dat bij je pull request en kun je het alsnog aanpassen.
 4. Klik op **Commit changes…**, beschrijf kort wat je hebt veranderd en kies **Propose changes**.
 5. Klik daarna op **Create pull request**.
 
@@ -71,6 +74,7 @@ Een paar afspraken:
 - Pagina's staan in `docs/`, met een map per tabblad (bijv. `docs/mijn-woning/`). Afbeeldingen voor een pagina zet je in `docs/images/<paginanaam>/`, downloadbare bestanden zoals handleidingen in `docs/assets/`.
 - Voeg een nieuwe pagina toe aan `nav` in `zensical.toml`, anders staat hij niet in het menu.
 - Controleer je werk met `uv run zensical build --clean --strict`. Deze moet zonder waarschuwingen slagen.
+- De pre-commit hook zet bij elke pagina die je wijzigt de datum *Laatst geüpdatet* op vandaag. Past hij een datum aan, dan stopt de commit even: doe `git add` en commit opnieuw.
 - Werk in een eigen branch en open een pull request naar `main`.
 
 ## Richtlijnen voor goede inhoud

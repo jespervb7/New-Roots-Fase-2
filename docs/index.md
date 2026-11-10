@@ -3,6 +3,7 @@ title: Welkom bij New Roots Fase 2
 description: Alle praktische informatie over wonen in New Roots Fase 2 op één plek.
 hide:
   - navigation
+revision_date: "10 november 2026"
 ---
 
 # Welkom bij New Roots Fase 2

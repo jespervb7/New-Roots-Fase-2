@@ -1,6 +1,7 @@
 ---
 title: VvE & contact
 description: Wie je waarvoor benadert, en informatie over de Vereniging van Eigenaars.
+revision_date: "10 november 2026"
 ---
 
 # VvE & contact

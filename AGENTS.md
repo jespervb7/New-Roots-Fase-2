@@ -85,6 +85,10 @@ There are no unit tests or linters. **A passing `uv run zensical build --clean -
 - Make all site configuration changes in `zensical.toml`. Do not introduce another docs generator (MkDocs, Docusaurus, etc.) or a custom build script.
 - Only enable a Markdown extension or theme feature if a page actually uses it, and validate with a strict build afterward.
 - Keep `.github/workflows/docs.yml` and the pre-commit hook in line with any change to the build command.
+- **"Laatst geüpdatet" dates**: every page has `revision_date: "10 november 2026"` (Dutch format) in its front matter, which Zensical shows at the bottom of the page. It must equal the date of the last commit that changed the page.
+  - The `revision-date` pre-commit hook (`scripts/revision_dates.py update`) sets it to today on every changed page. When it changes a file the commit stops; `git add` the page and commit again.
+  - On pull requests, `.github/workflows/check-revision-dates.yml` runs `scripts/revision_dates.py check` and fails if a changed page's date doesn't match its last commit.
+  - When you edit a page, update `revision_date` to today yourself if the hook isn't installed. New pages get the field from the hook; `scripts/revision_dates.py backfill` fills it for pages that lack it.
 
 ## Before you finish
 

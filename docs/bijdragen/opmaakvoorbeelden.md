@@ -1,5 +1,6 @@
 ---
 icon: lucide/rocket
+revision_date: "10 november 2026"
 ---
 
 # Get started

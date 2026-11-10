@@ -1,6 +1,7 @@
 ---
 title: Verhuizen
 description: Wat je moet regelen als je in New Roots Fase 2 komt wonen of vertrekt.
+revision_date: "10 november 2026"
 ---
 
 # Verhuizen

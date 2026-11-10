@@ -1,3 +1,7 @@
+---
+revision_date: "10 november 2026"
+---
+
 # Verhuischecklist
 
 - Adres wijzigen
