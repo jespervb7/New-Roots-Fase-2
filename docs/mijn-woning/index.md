@@ -1,7 +1,7 @@
 ---
 title: Mijn woning
 description: Installaties, onderhoud en handleidingen voor je appartement.
-revision_date:
+revision_date: "10 november 2026"
 ---
 
 # Mijn woning

@@ -36,7 +36,8 @@ MONTHS_NL = [
     "juli", "augustus", "september", "oktober", "november", "december",
 ]
 FIELD = "revision_date"
-FIELD_RE = re.compile(rf'^{FIELD}:\s*"?([^"\r\n]*)"?\s*$', re.MULTILINE)
+# [ \t] instead of \s: an empty "revision_date:" must not swallow the next line.
+FIELD_RE = re.compile(rf'^{FIELD}:[ \t]*"?([^"\r\n]*?)"?[ \t]*$', re.MULTILINE)
 
 
 # --- dates -------------------------------------------------------------------
@@ -172,7 +173,7 @@ def cmd_backfill(directory: str) -> int:
     count = 0
     for path in sorted(p for p in Path(directory).rglob("*") if p.suffix == ".md"):
         text, nl = read(path)
-        if get_date(text) is not None:
+        if get_date(text):  # skip pages that already have a (non-empty) date
             continue
         d = last_commit_date(path)
         if d:
