@@ -1,0 +1,62 @@
+name: ✏️ Correctie of verouderde informatie
+description: Meld een fout, verouderde informatie, een kapotte link of een tikfout.
+title: "[Correctie]: "
+labels: ["documentation"]
+assignees: ["jespervb7"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bedankt dat je helpt de site actueel te houden!
+
+        ⚠️ **Deze site is openbaar.** Deel geen namen, telefoonnummers of e-mailadressen van individuele bewoners, en geen toegangscodes, alarmcodes of wachtwoorden.
+
+  - type: input
+    id: pagina
+    attributes:
+      label: Op welke pagina?
+      description: Plak de link naar de pagina, of noem de titel.
+      placeholder: "https://... of 'Contact info'"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: soort
+    attributes:
+      label: Wat is er mis?
+      options:
+        - Informatie klopt niet (meer)
+        - Link werkt niet
+        - Afbeelding ontbreekt of is verouderd
+        - Tikfout of onduidelijke tekst
+        - Iets anders
+    validations:
+      required: true
+
+  - type: textarea
+    id: huidig
+    attributes:
+      label: Wat staat er nu?
+      description: Kopieer de tekst of beschrijf het deel dat niet klopt.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: Wat zou het moeten zijn?
+      description: Laat leeg als je het niet weet; dan zoeken wij het uit.
+
+  - type: textarea
+    id: bron
+    attributes:
+      label: Bron
+      description: Hoe weet je dit? Bijv. een link, een nieuwsbrief van de VvE of eigen ervaring.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: Mijn melding bevat geen persoonsgegevens van bewoners, codes of wachtwoorden.
+          required: true

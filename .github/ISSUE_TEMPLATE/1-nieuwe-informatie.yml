@@ -1,0 +1,82 @@
+name: 💡 Nieuwe informatie of idee
+description: Deel een tip, handleiding, contactgegeven of idee voor een nieuwe pagina.
+title: "[Idee]: "
+labels: ["enhancement"]
+assignees: ["jespervb7"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bedankt dat je meedenkt! Vul in wat je weet. Niet alles hoeft compleet te zijn, wij zoeken de rest uit.
+
+        ⚠️ **Deze site is openbaar.** Deel geen namen, telefoonnummers of e-mailadressen van individuele bewoners, en geen toegangscodes, alarmcodes of wachtwoorden.
+
+  - type: dropdown
+    id: soort
+    attributes:
+      label: Soort bijdrage
+      description: Wat voor informatie wil je delen?
+      options:
+        - Handleiding of instructie (bijv. apparaat of installatie)
+        - Contactgegevens (VvE, beheerder, aannemer, leverancier)
+        - Handige tip (parkeren, afval, fietsenstalling, enz.)
+        - Checklist (bijv. verhuizen)
+        - Idee voor een nieuwe pagina of onderwerp
+        - Iets anders
+    validations:
+      required: true
+
+  - type: input
+    id: onderwerp
+    attributes:
+      label: Onderwerp
+      description: Waar gaat het over, in een paar woorden?
+      placeholder: "Bijv. thermostaat instellen, grofvuil ophalen, contact liftonderhoud"
+    validations:
+      required: true
+
+  - type: textarea
+    id: informatie
+    attributes:
+      label: De informatie
+      description: |
+        Beschrijf wat bewoners moeten weten of doen. Stappen, tips en ervaringen zijn welkom.
+        Foto's of screenshots kun je hier in het tekstvak slepen.
+      placeholder: |
+        1. Ga naar ...
+        2. Klik op ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: bron
+    attributes:
+      label: Bron
+      description: Waar komt deze informatie vandaan? Denk aan een link naar een handleiding, website, of een e-mail/nieuwsbrief van de VvE of beheerder.
+      placeholder: "https://..."
+
+  - type: dropdown
+    id: zekerheid
+    attributes:
+      label: Hoe zeker is deze informatie?
+      options:
+        - Officieel (van fabrikant, VvE, beheerder of gemeente)
+        - Zelf uitgeprobeerd, het werkt
+        - Gehoord van anderen / niet zeker
+    validations:
+      required: true
+
+  - type: input
+    id: pagina
+    attributes:
+      label: Bij welke pagina hoort het?
+      description: Laat leeg als het een nieuwe pagina moet worden of als je het niet weet.
+      placeholder: "Bijv. Vervanging luchtfilters"
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: Mijn bijdrage bevat geen persoonsgegevens van bewoners, codes of wachtwoorden.
+          required: true

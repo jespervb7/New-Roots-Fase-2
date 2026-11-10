@@ -1,0 +1,93 @@
+# AGENTS.md
+
+Instructions for AI coding agents working in this repository.
+
+## What this project is
+
+A documentation website for residents of **New Roots Fase 2**, an apartment complex in Utrecht. The site gathers and combines everything that is useful to know when living there: how-to guides for appliances and installations (e.g. the WTW/ventilation unit), contact details for the VvE, property manager and contractors, practical tips (parking, locks, waste), and checklists such as moving in.
+
+The audience is **residents, not developers**. Every page should be understandable by someone with no technical background who just wants to get something done at home.
+
+The site is built with [Zensical](https://zensical.org/docs/) and published publicly to GitHub Pages.
+
+## Repository layout
+
+| Path | Purpose |
+| --- | --- |
+| `docs/` | Source Markdown pages. This is the content of the site. |
+| `docs/images/<page-name>/` | Screenshots and images used by a specific page (one subfolder per page). |
+| `docs/assets/` | Downloadable files such as manuals and PDFs, and site-wide assets. |
+| `docs/TODO.md` | Open topics/issues in the complex that may later become pages. |
+| `zensical.toml` | Site config: name, `nav`, theme, and enabled Markdown extensions. |
+| `site/` | Generated build output. Never edit by hand; it is not committed. |
+| `.github/workflows/docs.yml` | Builds and deploys the site to GitHub Pages on push to `main`. |
+
+## Commands
+
+Use `uv` so tooling matches the lockfile:
+
+```sh
+uv sync --group dev              # install zensical + pre-commit
+uv run pre-commit install        # enable the strict-build hook
+uv run zensical serve --open     # live preview at http://localhost:8000
+uv run zensical build --clean --strict   # authoritative validation
+```
+
+There are no unit tests or linters. **A passing `uv run zensical build --clean --strict` is the definition of done** for any change to `docs/` or `zensical.toml`. Fix every warning; the build is strict on purpose (broken links, missing images, etc.).
+
+## Writing content
+
+### Language and tone
+- The site content is primarily **Dutch**. Write new pages in Dutch unless asked otherwise, and keep the language of an existing page consistent when editing it.
+- Write for residents: short sentences, concrete steps, no jargon. Explain technical terms the first time (e.g. "WTW-unit (warmteterugwinning, het ventilatiesysteem)").
+- Lead with the answer or action; put background and details after.
+
+### Page structure
+- Every page starts with a single `# Title`.
+- Add front matter with at least `title` and `description`; use `status: new` for freshly added pages and `tags` where helpful:
+  ```yaml
+  ---
+  title: Hoe vervang ik mijn luchtfilters?
+  description: Waar je luchtfilters koopt, welke je nodig hebt en hoe je ze plaatst.
+  status: new
+  tags: Luchtfilters
+  ---
+  ```
+- For how-to pages, follow the pattern of `docs/vervangen luchtfilters.md`: a tip/summary at the top, numbered or clearly headed steps with screenshots, then a `FAQ` section.
+- Use Zensical features where they help readability: admonitions (`!!! tip`, `!!! warning`) for important notes, collapsible `???` blocks for FAQs, task lists for checklists, buttons (`{ .md-button }`) for primary links. See `docs/markdown.md` and `docs/index.md` for examples of the enabled extensions.
+- Prefer one topic per page. If information relates to an existing page, extend that page instead of creating a near-duplicate, and cross-link related pages.
+
+### Sources and reliability
+- Cite the source of factual information (official manual, VvE announcement, municipality page, supplier) with a link.
+- When linking to an external manual or PDF that might disappear, also store a copy in `docs/assets/` and link to both (as done for the HRU ECO 200 manual).
+- Clearly mark uncertain or resident-derived information (e.g. "Dit lijkt te werken, maar is niet officieel bevestigd") instead of presenting it as fact.
+- Do not invent phone numbers, email addresses, prices, opening hours, or procedures. If something is unknown, leave a clear placeholder or ask the user.
+
+### Privacy and safety (the site is public)
+- Never publish personal data of individual residents: no names tied to apartment numbers, private phone numbers, personal email addresses, or photos showing people or identifiable home interiors without consent.
+- Business/organisation contacts (VvE mailbox, property manager, contractors) are fine.
+- Do not publish access codes, alarm/door codes, Wi-Fi passwords, key/cylinder numbers, or anything that would weaken building security.
+- Do not commit secrets or private share links (e.g. private Power BI or Google Drive links).
+
+## Files, images, and navigation
+
+- **New pages**: create them in `docs/` with lowercase, hyphenated filenames (e.g. `afval-scheiden.md`). Some existing files use spaces; don't rename them unless asked, and if you do, update all links and `nav`.
+- **Navigation**: every page that should be visible must be added to the `nav` array in `zensical.toml`, with a clear Dutch label. Keep `nav` grouped logically (e.g. Instructies, Contact, Handig om te weten, Verhuizen) as the site grows.
+- **Images**: put them in `docs/images/<page-name>/` with descriptive filenames (`step1_navigate_to_filters.png`), and always provide alt text: `![Itho webshop keuzewijzer](images/...)`.
+- **Downloads/manuals**: put them in `docs/assets/`.
+- Use relative links between pages (`[contactgegevens](contact-info.md)`). Paths with spaces must be URL-encoded (`%20`) in links.
+- Keep files reasonably small; compress large screenshots before adding them.
+
+## Configuration changes
+
+- Make all site configuration changes in `zensical.toml`. Do not introduce another docs generator (MkDocs, Docusaurus, etc.) or a custom build script.
+- Only enable a Markdown extension or theme feature if a page actually uses it, and validate with a strict build afterward.
+- Keep `.github/workflows/docs.yml` and the pre-commit hook in line with any change to the build command.
+
+## Before you finish
+
+1. `uv run zensical build --clean --strict` passes without warnings.
+2. New or moved pages are in `nav`, and all internal links and images resolve.
+3. No personal resident data, codes, or secrets were added.
+4. Content is in Dutch (or matches the existing page), sourced, and written for residents.
+5. Don't commit `site/`, `.venv/`, or `.cache/`.
