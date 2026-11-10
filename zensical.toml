@@ -2,7 +2,7 @@
 site_url = "https://jespervb7.github.io/New-Roots-Fase-2/"
 site_name = "New Roots Fase 2"
 strict = true
-# site_description = "Your project description"
+site_description = "Praktische informatie over wonen in New Roots Fase 2, door en voor bewoners."
 site_author = "Jesper van Beemdelust"
 
 copyright = "This content is provided for general information only, “as is,” and is not professional advice. Use your own judgment and consult experts before relying on it."
@@ -143,6 +143,17 @@ until = "2026-12-31"
 
 # Tags: pages list their topics under `tags:` in the front matter; docs/tags.md shows
 # the overview. Only tags in tags_allowed may be used (catches typos); add new ones here.
+
+# Share cards: a preview image per page for links shared in WhatsApp, Signal, email etc.
+# Uses each page's title and description (fallback: site_description).
+# Background: picture of the building (social-cards/background.webp) with a 60% dark green
+# tint on top so the text stays readable. Colours can be changed freely.
+# Fonts come from social-cards/fonts (committed), so builds never download them;
+# see social-cards/README.md.
+[project.plugins.social]
+cache_dir = "social-cards"
+cards_layout_options = { background_image = "social-cards/background.webp", background_color = "#1f4d3a99", color = "#ffffff" }
+
 [project.plugins.tags]
 tags_allowed = [
   "Afval",
