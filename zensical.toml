@@ -36,6 +36,7 @@ nav = [
   { "VvE & contact" = [
     "vve-en-contact/index.md",
     { "Contactgegevens" = "vve-en-contact/contactgegevens.md" },
+    { "Bouwpartijen en onderaannemers" = "vve-en-contact/bouwpartijen.md" },
   ] },
   { "Bijdragen" = [
     "bijdragen/index.md",

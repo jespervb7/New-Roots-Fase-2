@@ -1,7 +1,7 @@
 ---
 title: VvE & contact
 description: Wie je waarvoor benadert, en informatie over de Vereniging van Eigenaars.
-revision_date: "10 november 2026"
+revision_date: "11 november 2026"
 ---
 
 # VvE & contact
@@ -9,6 +9,7 @@ revision_date: "10 november 2026"
 Wie je waarvoor benadert, en wat de VvE (Vereniging van Eigenaars) doet.
 
 - [Contactgegevens](contactgegevens.md): de VvE, de beheerder en andere partijen.
+- [Wie heeft het gebouw gebouwd?](bouwpartijen.md): ontwikkelaar, aannemer, architecten en onderaannemers per onderdeel.
 
 ## Nog geen pagina
 
