@@ -130,6 +130,21 @@ icon = "fontawesome/brands/github"
 link = "https://github.com/jespervb7/New-Roots-Fase-2"
 name = "Broncode op GitHub"
 
+# Google Analytics (GA4): visitor statistics. The Measurement ID comes from Google Analytics
+# (Admin > Data streams > web stream). Use the G- ID, not the GTM- container snippet:
+# the built-in integration below respects the cookie banner, a pasted GTM snippet would not.
+# Analytics only loads after a visitor accepts the cookie banner ([project.extra.consent]);
+# this consent is required in the Netherlands (AVG/GDPR and the Telecommunicatiewet).
+# To turn analytics off, comment out both blocks below.
+[project.extra.analytics]
+provider = "google"
+property = "G-6QKPQZWT71"
+
+[project.extra.consent]
+title = "Cookies"
+description = "We willen graag met Google Analytics bijhouden hoe deze site gebruikt wordt, zodat we hem kunnen verbeteren. Dat doen we alleen als je dat goedvindt. Je kunt je keuze later wijzigen via \"Cookie-instellingen\" onderaan de pagina."
+actions = ["accept", "reject", "manage"]
+
 # Announcement bar at the top of every page (template: overrides/main.html).
 # - text:      the message (required; leave empty "" to hide the bar)
 # - link:      optional link, e.g. a page "bijdragen/" or a full https:// URL
