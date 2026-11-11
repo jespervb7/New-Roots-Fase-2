@@ -1,0 +1,23 @@
+{#-
+  Footer copyright for New Roots Fase 2. Same as the theme's version, plus a
+  "Cookie-instellingen" link that reopens the cookie banner. The link only
+  appears when the banner is enabled ([project.extra.consent] in zensical.toml).
+-#}
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+  {% if config.extra.consent %}
+    <div>
+      <a href="#__consent">Cookie-instellingen</a>
+    </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  {% endif %}
+</div>
